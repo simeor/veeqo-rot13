@@ -1,2 +1,28 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="container">
+
+  <div class="form d-flex justify-content-center align-items-center">
+    <img class="logo mb-2" src="https://www.veeqo.com/wp-content/themes/ss88/images/brand/veeqo.svg" alt="logo">
+    <h2>ROT <%= params[:number] %> Substitution Cipher</h2>
+
+    <!-- rot_cipher function can be found in pages contoller -->
+    <% if params[:name] && params[:number] %>
+      <div class="answer my-3"><%= rot_cipher(params[:name], params[:number].to_i) %></div>
+    <% end %>
+
+    <!-- form -->
+    <div class="form-row ">
+      <%= form_tag( root_path, method: :get) do %>
+        <div class="col">
+          <%= text_field_tag :name, params[:name], placeholder: "Input Word", class: "m-2" %>
+        </div>
+        <div class="col">
+          <%= number_field_tag :number, params[:number], placeholder: "Input Number", class: "m-2"%>
+        </div>
+        <div class="col">
+          <%= submit_tag "Submit", :class=>"submit" %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+  <a target="_blank" href="https://www.linkedin.com/in/simeo-russo-web-development/">More about Simeo</a>
+</div>

@@ -1,1 +1,44 @@
 // Specific CSS for your home-page
+
+@import url('https://fonts.googleapis.com/css2?family=Kumbh+Sans&display=swap');
+
+
+body{
+  background-color: #c4e0f2;
+  color: #000;
+  font-family: 'Kumbh Sans', sans-serif;
+}
+
+a{
+  color:#f2624f;
+}
+
+.logo{
+  height: 100px;
+}
+
+.answer{
+  font-size: 18px;
+  font-weight: bolder;
+}
+
+
+.form{
+  height: 100vh;
+  flex-direction: column;
+  width: 100%;
+}
+
+.form-row{
+  padding: 18px;
+  border-radius: 5px;
+}
+
+.submit{
+  width: 100%;
+  background-color: #1B2227;
+  color: white;
+  border:none;
+  border-radius: 5px;
+  padding: 8px;
+}
